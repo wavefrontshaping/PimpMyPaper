@@ -10,7 +10,7 @@ For example if there is an image subfolder under your extension project workspac
 
 ## Installation
 
-Download the `.vsix` file from the last [Releases](releases/).
+Download the `.vsix` file from the last [Releases](./releases/).
 From the VScode  `Extension` tab, install with `Install from VSIX`. 
 
 ## Usage
