@@ -8,6 +8,10 @@ Describe specific features of your extension including screenshots of your exten
 
 For example if there is an image subfolder under your extension project workspace:
 
+## Installation
+
+Download the `.vsix` file from the last [Releases](releases/).
+From the VScode  `Extension` tab, install with `Install from VSIX`. 
 
 ## Usage
 
