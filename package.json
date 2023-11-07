@@ -1,0 +1,80 @@
+{
+  "name": "pimpmypaper",
+  "displayName": "PimpMyPaper",
+  "description": "Use GPT to correct and improve text when writing a LaTeX document.",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": "https://xxxx",
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "PimpMyPaper",
+      "properties": {
+        "pimpMyPaper.customPrompt": {
+          "type": "string",
+          "description": "Prompt added berfore the text to correct/improve.",
+          "default": "You are a scientist helping to write a scientific paper. You have a draft of the paper, correct and improve the text. Important: keep the line breaks and the latex commands.",
+          "editPresentation": "multilineText"
+        },
+        "pimpMyPaper.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API Key for GPT."
+        },
+        "pimpMyPaper.model": {
+          "type": "string",
+          "default": "gpt-3.5-turbo-0613",
+          "description": "GPT model to use."
+        },
+        "pimpMyPaper.keepOld": {
+          "type": "boolean",
+          "default": true,
+          "description": "Keep old text commented in the .tex file."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.pimpMyPaper",
+        "title": "Pimp My Paper"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "extension.pimpMyPaper",
+          "when": "editorLangId == latex"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.3",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.82.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vscode/test-electron": "^2.3.6",
+    "eslint": "^8.52.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "openai": "^4.14.1"
+  }
+}
