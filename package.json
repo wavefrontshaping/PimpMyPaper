@@ -9,7 +9,7 @@
   "categories": [
     "Other"
   ],
-  "repository": "https://xxxx",
+  "repository": "https://github.com/wavefrontshaping/PimpMyPaper",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
