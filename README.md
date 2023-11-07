@@ -11,7 +11,7 @@ For example if there is an image subfolder under your extension project workspac
 
 ## Usage
 
-![Usage](images/usage.webm)
+![Usage](images/usage.gif)
 
 ## Settings
 
